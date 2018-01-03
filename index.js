@@ -1,10 +1,10 @@
 // https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki
-// bitcoin:<address>[?amount=<amount>][?label=<label>][?message=<message>]
+// bitcoincash:<address>[?amount=<amount>][?label=<label>][?message=<message>]
 
 var qs = require('qs')
 
 function decode (uri) {
-  var qregex = /bitcoin:\/?\/?([^?]+)(\?([^]+))?/.exec(uri)
+  var qregex = /bitcoincash:\/?\/?([^?]+)(\?([^]+))?/.exec(uri)
   if (!qregex) throw new Error('Invalid BIP21 URI: ' + uri)
 
   var address = qregex[1]
