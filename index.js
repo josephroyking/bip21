@@ -29,7 +29,7 @@ function encode (address, options) {
     if (options.amount < 0) throw new TypeError('Invalid amount')
   }
 
-  return 'bitcoin:' + address + (query ? '?' : '') + query
+  return 'bitcoincash:' + address + (query ? '?' : '') + query
 }
 
 module.exports = {
